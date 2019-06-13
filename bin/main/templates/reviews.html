@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns: th = "http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kathy's Audiobook Reviews</title>
+    <link rel = "stylesheet" 
+    type = "text/CSS"
+    href = "review.CSS"/>
+</head>
+<body>
+    <h1>Kathy's Audiobook Reviews</h1>
+    <img src = "images/Books.jpg" alt = "Picture"/>
+    <div th:each="review: ${reviews}">
+       <ul>
+        <span class = " reviewsformat"> <a th:href = "@{/review(id=${review.id})}" th:text="${review.title}"></a></span>
+        <span class = "reviewsformat" > by </span>
+        <span class = "reviewsformat" th:text="${review.author}"></span>
+       </ul>
+
+    </div>
+    
+</body>
+</html>

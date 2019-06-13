@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns: th = "http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Audiobook Review </title>
+    <link rel = "stylesheet" 
+    type = "text/CSS"
+    href = "review.CSS"/>
+   
+</head>
+
+<body>
+
+    <h1> Audiobook Review </h1>
+    <div th:each = "review: ${reviews}">
+        <p id = "titlestyle" th:text = "${review.title}"></p>
+        <p id = "authorstyle" th:text = "${review.author}"></p>
+        <img th:src="@{'/images/' + ${review.url} + '.jpg'}" alt = "Picture"/>
+        <p><span class = "ratingstyle" th:text = "${review.rating}"></span>
+        <span class = "ratingstyle">/10 </span></p>
+        <p id = "descriptionstyle" th:text = "${review.description}"></p>
+       <p><a id = "homebutton" href = "http://localhost:8080/show-reviews">Back to home</a></p>
+    </div>
+</body>
+</html> 
+
