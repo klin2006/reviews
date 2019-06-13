@@ -1,28 +1,27 @@
 body{
     background-color: #31dbb6;
     text-align: center;
-
 }
 
 h1{
     color: rgb(132, 30, 228);
     font-size: 45px;
     font-family: "Century Schoolbook";
-
 }
-
 
 p{
     margin: 50px 50px;
 }
 
-
-
-
-img.resize{
-    width:200px;
-    height:200px;
+li{
+    list-style-type: none;
 }
+
+img {
+    max-width:auto;
+    max-height:50%;
+}
+
 .reviewsformat{
 
     font-size: 40px;
@@ -41,8 +40,8 @@ img.resize{
     font-size: 30px;
     font-family: "Century Schoolbook";
     font-weight: bold;
-
 }
+
  .ratingstyle{
         color: rgba(255, 199, 15, 0.788);
         font-size: 45px;
@@ -50,13 +49,13 @@ img.resize{
         font-weight: bold;
         white-space: nowrap;
  }
+
  #descriptionstyle{
     font-size: 20px;
  }
 
  #homebutton{
-
-    font-size: 20px;
-    font-family: "Century Schoolbook"
+    font-size: 25px;
+    font-family: "Century Schoolbook";
     color:  rgb(204, 0, 255);
  }

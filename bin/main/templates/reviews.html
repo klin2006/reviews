@@ -14,11 +14,15 @@
     <img src = "images/Books.jpg" alt = "Picture"/>
     <div th:each="review: ${reviews}">
        <ul>
-        <span class = " reviewsformat"> <a th:href = "@{/review(id=${review.id})}" th:text="${review.title}"></a></span>
-        <span class = "reviewsformat" > by </span>
-        <span class = "reviewsformat" th:text="${review.author}"></span>
-       </ul>
-
+           <li>
+            <span class = "reviewsformat"> <a th:href = "@{/review(id=${review.id})} " th:text="${review.title}"></a></span>
+            <span class = "reviewsformat"> by </span>
+            <span class = "reviewsformat" th:text="${review.author}"></span>
+            <span class = "reviewsformat"> ( </span>
+            <span class = "reviewsformat" th:text="${review.category}"></span>
+            <span class = "reviewsformat"> ) </span>
+            </li>
+        </ul>
     </div>
     
 </body>
